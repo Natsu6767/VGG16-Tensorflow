@@ -57,8 +57,8 @@ def conv_layer(x, num_filters, name, filter_height = 3, filter_width = 3,
 
 	with tf.variable_scope(name) as scope:
 
-		W = tf.get_variable('weights', shape = [filter_height, filter_width],
-			input_channels, initializer = tf.random_normal_initializer(mean = 0.0, stddev = 0.01))
+		W = tf.get_variable('weights', shape = [filter_height, filter_width, input_channels, num_filters],
+			initializer = tf.random_normal_initializer(mean = 0.0, stddev = 0.01))
 
 		b = tf.get_variable('biases', shape = [num_filters], initializer = tf.constant_initializer(0.0))
 
@@ -86,7 +86,7 @@ def fc_layer(x, input_size, output_size, name, relu = True):
 			else:
 				return z
 
-def max_pool(x, name, filter_height = 2, filter_width = 2
+def max_pool(x, name, filter_height = 2, filter_width = 2,
 	stride = 2, padding = 'VALID'):
 
 	return tf.nn.max_pool(x, ksize = [1, filter_height, filter_width, 1],
