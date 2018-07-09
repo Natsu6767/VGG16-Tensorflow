@@ -8,4 +8,4 @@ which you can find [here](https://mohitjain.me/2018/06/07/vggnet/) with further 
 - `vgg16.py`: Class with the graph definition of the VGG16.
 - `VGG16 Train.ipynb`: Notebook to train and test the implementation of VGG16.
 
-If you are having trouble viewing the notebook file, click [here](http://nbviewer.jupyter.org/github/Natsu6767/VGG16-Tensorflow/blob/master/VGG16%20Train.ipynb).
+If you are having trouble viewing the notebook file, click [here](http://nbviewer.jupyter.org/github/natsu6767/VGG16-Tensorflow/blob/master/VGG16%20Train.ipynb).
